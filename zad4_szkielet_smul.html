@@ -3,6 +3,14 @@
  <title> Smuła 3F</title>
  <h1 style="font-size: 2cm, color=red"><font color="red"><b>Szkielet zaliczeniowy JavaScript Smuła Krzysztof klasa 3F</b></h1>
 <script language="JavaScript">
+  function WinOpen_z1() 
+ {
+window.open("zad1_smul.html","okienko_z1","height=380,width=160,top=200,left=200");
+ }
+  function WinOpen_z2() 
+ {
+window.open("zad2_smul.html","okienko_z2","height=380,width=160,top=200,left=200");
+ }
  function WinOpen_z3() 
  {
 window.open("zad3_smul.html","okienko_z3","height=380,width=160,top=200,left=200");
@@ -22,7 +30,9 @@ function okno_zamknij()
  </script>
  </head>
 <body>
- <form>
+ <form> 
+  <input type="button_z1" name="zadanie1" value="zadanie1-smuła" onclick="WinOpen_z1(' ')">
+ <input type="button_z2" name="zadanie2" value="zadanie2-Smuła" onclick="WinOpen_z2(' ')">
  <input type="button_z3" name="zadanie3" value="zadanie3-smuła" onclick="WinOpen_z3(' ')">
  <input type="button_z4" name="zadanie4" value="zadanie4-Smuła" onclick="WinOpen_z4(' ')">
  <input type="button_z5" name="zadanie5" value="zadanie5-Smuła" onclick="WinOpen_z5(' ')">

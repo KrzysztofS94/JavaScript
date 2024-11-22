@@ -1,0 +1,46 @@
+<html>
+<head>
+    <script type="text/javascript">
+        function okno_zamknij_smula() {
+            window.close()
+        }
+        29
+    </script>
+</head>
+<body>
+<form>
+<textarea name="Smuła" cols="120" rows="30" readonly>
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <title>Zadanie 12</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <div id="strona" style="color:red;font-size:50px;">
+        <script language="JavaScript">
+            let D1_smu = prompt("Pierwsza data (D1_smu):", "");
+            let G1_smu = prompt("Pierwsza godzina (G1_smu):", "");
+            let D2_smu = prompt("Druga data (D2_smu):", "");
+            let G2_smu = prompt("Druga godzina (G2_smu):", "");
+
+            let D1 = parseInt(D1_smu);
+            let G1 = parseInt(G1_smu);
+            let D2 = parseInt(D2_smu);
+            let G2 = parseInt(G2_smu);
+
+            let iloscSekund = ((D1 - D2) * 24 * 60 * 60) + ((G1 - G2) * 60 * 60);
+            document.getElementById("strona").innerHTML = "Ilość sekund: " + iloscSekund + " sekund";
+        </script>
+    </div>
+</body>
+
+</html>
+</textarea>
+    </form>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_smula()" />
+    <script type="text/javascript">
+    </script>
+</body>
+</html>

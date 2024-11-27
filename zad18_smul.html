@@ -10,11 +10,37 @@
  let a=parseFloat(prompt("a=",""));
  let b=parseFloat(prompt("b=",""));
  
+ 
+ function monzenie_smu(a, b) 
+ {
+ return a * b;
+ }
+ function odejmowanie_smu(a, b) 
+ {
+ return a - b;
+ }
+ function do_kwadratu_smu(a, b) 
+ {
+ let c=a*a;
+ let d=b*b;
+ return c;
+ return d;
+ } 
+ function reszta_z_dzielenia_a_przez_b_smu(a, b) 
+ {
+ return a % b;
+ }
  function suma_smu(a, b) 
  {
  return a + b;
  }
- document.body.innerHTML ="suma="+suma_smu(a,b)+"<br>";
+ document.write("podane liczby: a="+a+"  "+"b="+b+"<br>");
+ document.write("suma="+suma_smu(a,b)+"<br>");
+ document.write("mnożenie="+monzenie_smu(a,b)+"<br>");
+ document.write("odejmowanie="+odejmowanie_smu(a,b)+"<br>");
+ document.write("do kwadratu="+do_kwadratu_smu(a)+"<br>");
+ document.write("do kwadratu="+do_kwadratu_smu(b)+"<br>");
+ document.write("reszta z dzielenia a przez b = "+reszta_z_dzielenia_a_przez_b_smu(a,b)+"<br>");
 </script>
 </div>
 </body>

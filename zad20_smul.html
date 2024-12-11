@@ -1,0 +1,67 @@
+<html> 
+<head> 
+<title>
+ zad 20
+</title>
+ <script language="JavaScript">
+ var xa_smu=
+function AB_smu(xa,ya,xb,yb)
+{
+xa_smu=parseFloat(xa)
+ ya_smu=parseFloat(ya)
+xb_smu=parseFloat(xb)
+ yb_smu=parseFloat(yb)
+
+}
+function BC_smu(xb,yb,xc,yc)
+{
+xb_smu=parseFloat(xb)
+ yb_smu=parseFloat(yb)
+ xc_smu=PerseFloat(xc)
+yc_smu=PerseFloat(yc)
+}
+function AC_smu(xa,ya,xc,yc)
+{
+xa_smu=parseFloat(xa)
+ ya_smu=parseFloat(ya)
+ xc_smu=PerseFloat(xc)
+yc_smu=PerseFloat(yc)
+
+}
+
+ </script>
+</head> 
+<body> 
+tworzenie trójkąta
+<br> <br>
+<form name="formularz" action="..."; onsubmit="AB_smu(this.pierwszy.value,this.drugi.value,this.trzeci.value,this.czwarty.value); 
+BC_smu(this.trzeci.value,this.czwarty.value,this.piąty.value,this.szósty.value);
+AC_smu(this.pierwszy.value,this.drugi.value,this.piąty.value,this.szósty.value);return false"> 
+ Bok |AB|<br><br>
+ Podaj xa=
+ <input size="6" name="pierwszy">
+ Podaj ya=
+ <input size="6" name="drugi">
+ <br><br>
+Bok |BC|<br> <br>
+ Podaj xb=
+ <input size="6" name="trzeci">
+ Podaj yb=
+ <input size="6" name="czwarty">
+ <br><br>
+Bok |AC|<br> <br>
+ Podaj xc=
+ <input size="6" name="piąty">
+ Podaj yc=
+ <input size="6" name="szósty">
+ <br> <br>
+ <input TYPE="submit" Value="oblicz" >
+ <br> <br>
+ 
+</form>
+<table>
+ <tr id="pokaz1"></tr>
+ <tr id="pokaz2"></tr>
+</table>
+</body> 
+</html>

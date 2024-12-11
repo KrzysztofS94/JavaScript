@@ -1,1 +1,4 @@
 # JavaScript
+
+
+Dokonczyc 20

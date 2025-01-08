@@ -1,0 +1,27 @@
+<html>
+ <head>
+ <script type="text/javascript">
+ function Obiekt_smula(nazwisko_s,imie_s,zawod_s)//początek konstruktora
+{
+this.nazwisko=nazwisko_s;
+this.imie=imie_s;
+this.zawod=zawod_s;
+}//koniec konstruktora
+ klient.prototype.wypisz = function () //definicja metody
+ {
+ alert(this.nazwisko + ' ' + this.imie+ ' ' + this.zawod);
+ };
+var pokaz_smula = new Obiekt_smula("Smuła", "Krzysztof", "Informatyk"); // nowy obiekt osoba1
+
+pokaz_smula.wypisz(); // uruchomienie metody wypisz() dotyczącej osoby 1
+
+ document.write("dostęp do właściwości"+"<br>");
+// poniżej dostęp do pól osoby1
+ document.write("klient pierwszy"+" "+osoba1.nazwisko+" "+osoba1.imie+" "+osoba1.zawod);
+ </script>
+ </head>
+<body>
+<br>
+ programowanie obiektowe 
+</body>
+</html>

@@ -2,4 +2,4 @@
 
 
 Dokonczyc 20
-28,3,31
+i zrobic 28

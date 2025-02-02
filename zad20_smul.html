@@ -1,73 +1,62 @@
-<html> 
-<head> 
-<title>
- zad 20
-</title>
- <script language="JavaScript">
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zadanie 20</title>
+    <script language="JavaScript">
+        function AB_smu() {
+            const xa = parseFloat(document.getElementById("xa").value);
+            const ya = parseFloat(document.getElementById("ya").value);
+            const xb = parseFloat(document.getElementById("xb").value);
+            const yb = parseFloat(document.getElementById("yb").value);
 
-function AB_smu()
-{
-var xa_smu= parseFloat(document.getElementById('xa').value);
-var ya_smu= parseFloat(document.getElementById('ya').value);
-var xb_smu= parseFloat(document.getElementById('xb').value);
-var yb_smu= parseFloat(document.getElementById('yb').value);
 
-const AB = Math.sqrt(Math.pow(xb_smu - xa_smu, 2) + Math.pow(yb_smu - ya_smu, 2));
- 
- document.getElementById("nazwa").innerHTML ="Bok AB= "+AB.tofixed(2);
-}
-function BC_smu(xb,yb,xc,yc)
-{
-var xb_smu= parseFloat(document.getElementById('xb').value);
-var yb_smu= parseFloat(document.getElementById('yb').value);
-var xc_smu= parseFloat(document.getElementById('xc').value);
-var yc_smu= parseFloat(document.getElementById('yc').value);
+            const AB = Math.sqrt(Math.pow(xb - xa, 2) + Math.pow(yb - ya, 2));
+			
+            document.getElementById("nazwa").innerHTML = `Długość boku AB = ${AB.toFixed(2)}`;
+        }
 
-}
-function AC_smu(xa,ya,xc,yc)
-{
-var xa_smu= parseFloat(document.getElementById('xa').value);
-var ya_smu= parseFloat(document.getElementById('ya').value);
-var xc_smu= parseFloat(document.getElementById('xc').value);
-var yc_smu= parseFloat(document.getElementById('yc').value);
+        function BC_smu() {
+            const xb = parseFloat(document.getElementById("xb").value);
+            const yb = parseFloat(document.getElementById("yb").value);
+            const xc = parseFloat(document.getElementById("xc").value);
+            const yc = parseFloat(document.getElementById("yc").value);
 
-}
+           
+            const BC = Math.sqrt(Math.pow(xc - xb, 2) + Math.pow(yc - yb, 2));
+            document.getElementById("nazwa").innerHTML = `Długość boku BC = ${BC.toFixed(2)}`;
+        }
 
- </script>
-</head> 
-<body> 
-<br> <br>
- Punkt A<br><br>
- Podaj xa=
- <input type="text" id="xa">
+        function AC_smu() {
+            const xa = parseFloat(document.getElementById("xa").value);
+            const ya = parseFloat(document.getElementById("ya").value);
+            const xc = parseFloat(document.getElementById("xc").value);
+            const yc = parseFloat(document.getElementById("yc").value);
 
- Podaj ya=
- <input type="text" id="ya">
- <br><br>
+          
+            const AC = Math.sqrt(Math.pow(xc - xa, 2) + Math.pow(yc - ya, 2));
+            document.getElementById("nazwa").innerHTML = `Długość boku AC = ${AC.toFixed(2)}`;
+        }
+    </script>
+</head>
+<body>
+    <h1>Oblicz długości boków trójkąta</h1>
+    
+    <h2>Punkt A</h2>
+    Podaj xa = <input type="text" id="xa"><br>
+    Podaj ya = <input type="text" id="ya"><br><br>
 
-Punkt B<br> <br>
- Podaj xb=
- <input type="text" id="xb">
+    <h2>Punkt B</h2>
+    Podaj xb = <input type="text" id="xb"><br>
+    Podaj yb = <input type="text" id="yb"><br><br>
 
- Podaj yb=
- <input type="text" id="yb">
- <br><br>
- 
-Punkt C<br> <br>
- Podaj xc=
- <input type="text" id="xc">
+    <h2>Punkt C</h2>
+    Podaj xc = <input type="text" id="xc"><br>
+    Podaj yc = <input type="text" id="yc"><br><br>
 
- Podaj yc=
- <input type="text" id="yc">
- <br> <br>
- długości boków:
- <br>
- <input TYPE="button" Value="|AB|" onclick="AB_smu" >
- <br>
- <input TYPE="button" Value="|BC|" onclick="BC_smu" >
- <br>
- <input TYPE="button" Value="|AC|" onclick="AC_smu" >
- <br>
- <div style="font-size:50px;"id="nazwa"></div>
-</body> 
+    <input type="button" value="Oblicz |AB|" onclick="AB_smu()"><br>
+    <input type="button" value="Oblicz |BC|" onclick="BC_smu()"><br>
+    <input type="button" value="Oblicz |AC|" onclick="AC_smu()"><br><br>
+    
+    <div style="font-size:50pxt;"id="nazwa"></div>
+</body>
 </html>

@@ -4,64 +4,70 @@
  zad 20
 </title>
  <script language="JavaScript">
- var xa_smu=
-function AB_smu(xa,ya,xb,yb)
-{
-xa_smu=parseFloat(xa)
- ya_smu=parseFloat(ya)
-xb_smu=parseFloat(xb)
- yb_smu=parseFloat(yb)
 
+function AB_smu()
+{
+var xa_smu= parseFloat(document.getElementById('xa').value);
+var ya_smu= parseFloat(document.getElementById('ya').value);
+var xb_smu= parseFloat(document.getElementById('xb').value);
+var yb_smu= parseFloat(document.getElementById('yb').value);
+
+const AB = Math.sqrt(Math.pow(xb_smu - xa_smu, 2) + Math.pow(yb_smu - ya_smu, 2));
+ 
+ document.getElementById("nazwa").innerHTML ="Bok AB= "+AB.tofixed(2);
 }
 function BC_smu(xb,yb,xc,yc)
 {
-xb_smu=parseFloat(xb)
- yb_smu=parseFloat(yb)
- xc_smu=PerseFloat(xc)
-yc_smu=PerseFloat(yc)
+var xb_smu= parseFloat(document.getElementById('xb').value);
+var yb_smu= parseFloat(document.getElementById('yb').value);
+var xc_smu= parseFloat(document.getElementById('xc').value);
+var yc_smu= parseFloat(document.getElementById('yc').value);
+
 }
 function AC_smu(xa,ya,xc,yc)
 {
-xa_smu=parseFloat(xa)
- ya_smu=parseFloat(ya)
- xc_smu=PerseFloat(xc)
-yc_smu=PerseFloat(yc)
+var xa_smu= parseFloat(document.getElementById('xa').value);
+var ya_smu= parseFloat(document.getElementById('ya').value);
+var xc_smu= parseFloat(document.getElementById('xc').value);
+var yc_smu= parseFloat(document.getElementById('yc').value);
 
 }
 
  </script>
 </head> 
 <body> 
-tworzenie trójkąta
 <br> <br>
-<form name="formularz" action="..."; onsubmit="AB_smu(this.pierwszy.value,this.drugi.value,this.trzeci.value,this.czwarty.value); 
-BC_smu(this.trzeci.value,this.czwarty.value,this.piąty.value,this.szósty.value);
-AC_smu(this.pierwszy.value,this.drugi.value,this.piąty.value,this.szósty.value);return false"> 
- Bok |AB|<br><br>
+ Punkt A<br><br>
  Podaj xa=
- <input size="6" name="pierwszy">
+ <input type="text" id="xa">
+
  Podaj ya=
- <input size="6" name="drugi">
+ <input type="text" id="ya">
  <br><br>
-Bok |BC|<br> <br>
+
+Punkt B<br> <br>
  Podaj xb=
- <input size="6" name="trzeci">
+ <input type="text" id="xb">
+
  Podaj yb=
- <input size="6" name="czwarty">
+ <input type="text" id="yb">
  <br><br>
-Bok |AC|<br> <br>
- Podaj xc=
- <input size="6" name="piąty">
- Podaj yc=
- <input size="6" name="szósty">
- <br> <br>
- <input TYPE="submit" Value="oblicz" >
- <br> <br>
  
-</form>
-<table>
- <tr id="pokaz1"></tr>
- <tr id="pokaz2"></tr>
-</table>
+Punkt C<br> <br>
+ Podaj xc=
+ <input type="text" id="xc">
+
+ Podaj yc=
+ <input type="text" id="yc">
+ <br> <br>
+ długości boków:
+ <br>
+ <input TYPE="button" Value="|AB|" onclick="AB_smu" >
+ <br>
+ <input TYPE="button" Value="|BC|" onclick="BC_smu" >
+ <br>
+ <input TYPE="button" Value="|AC|" onclick="AC_smu" >
+ <br>
+ <div style="font-size:50px;"id="nazwa"></div>
 </body> 
 </html>

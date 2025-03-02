@@ -1,4 +1,4 @@
 # JavaScript
 
 
-i zrobic 28-32
+zrobic 28-32

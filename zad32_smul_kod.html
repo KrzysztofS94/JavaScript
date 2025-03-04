@@ -1,0 +1,54 @@
+<html>
+<head>
+    <script type="text/javascript">
+        function okno_zamknij_smula() {
+            window.close()
+        }
+    </script>
+</head>
+<body>
+<form>
+<textarea name="Smuła" cols="120" rows="30" readonly>
+<html>
+ <head>
+ <script type="text/javascript">
+ function Owocsmula(owoc_s,kolor_s,rodzaj_s,smak_s)
+{
+this.owoc=owoc_s;
+this.kolor=kolor_s;
+this.rodzaj=rodzaj_s;
+this.smak=smak_s;
+}
+ Owocsmula.prototype.pokaz_smula = function () 
+ {
+ alert(this.owoc + ' ' + this.kolor+ ' ' + this.rodzaj+ ' ' + this.smak);
+ };
+var jablko = new Owocsmula("jablko", "czerwone", "rodzaj: gloster", "lekko kwaskowe i orzeźwiające"); 
+var banan = new Owocsmula("banan", "żółty", "rodzaj: banan żółty", "słodki");
+var gruszka = new Owocsmula("gruszka","zielony","rodzaj: konferencja", "słodki");
+  
+jablko.pokaz_smula(); 
+banan.pokaz_smula(); 
+gruszka.pokaz_smula(); 
+  
+ document.write("dostęp do właściwości"+"<br>");
+  
+ document.write("Owoc 1: "+" "+jablko.owoc+" "+jablko.kolor+" "+jablko.rodzaj+" "+jablko.smak+"<br>");
+ document.write("Owoc 2: "+" "+banan.owoc+" "+banan.kolor+" "+banan.rodzaj+" "+banan.smak+"<br>");
+document.write("Owoc 3: "+" "+gruszka.owoc+" "+gruszka.kolor+" "+gruszka.rodzaj+" "+gruszka.smak+"<br>");
+
+  
+ </script> 
+ </head>
+<body>
+<br>
+ programowanie obiektowe 
+</body>
+</html>
+</textarea>
+    </form>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_smula()" />
+    <script type="text/javascript">
+    </script>
+</body>
+</html>

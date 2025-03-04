@@ -2,26 +2,32 @@
 <html>
  <head>
  <script type="text/javascript">
- function Owocsmula(owoc_s,kolor_s,rodzaj_s)
+ function Owocsmula(owoc_s,kolor_s,rodzaj_s,smak_s)
 {
 this.owoc=owoc_s;
 this.kolor=kolor_s;
 this.rodzaj=rodzaj_s;
-}//koniec konstruktora
- Owocsmula.prototype.wypisz = function () 
+this.smak=smak_s;
+}
+ Owocsmula.prototype.pokaz_smula = function () 
  {
- alert(this.owoc + ' ' + this.kolor+ ' ' + this.rodzaj);
+ alert(this.owoc + ' ' + this.kolor+ ' ' + this.rodzaj+ ' ' + this.smak);
  };
-var jablko1 = new Owocsmula("jablko", "czerwone", "rodzaj: gloster"); 
-var banan1 = new Owocsmula("banan", "żółty", "rodzaj: banan żółty");
+var jablko = new Owocsmula("jablko", "czerwone", "rodzaj: gloster", "lekko kwaskowe i orzeźwiające"); 
+var banan = new Owocsmula("banan", "żółty", "rodzaj: banan żółty", "słodki");
+var gruszka = new Owocsmula("gruszka","zielony","rodzaj: konferencja", "słodki");
   
-jablko1.wypisz(); 
-banan1.wypisz(); 
+jablko.pokaz_smula(); 
+banan.pokaz_smula(); 
+gruszka.pokaz_smula(); 
   
  document.write("dostęp do właściwości"+"<br>");
   
- document.write("Owoc 1: "+" "+jablko1.owoc+" "+jablko1.kolor+" "+jablko1.rodzaj+"<br>");
- document.write("Owoc 2: "+" "+banan1.owoc+" "+banan1.kolor+" "+banan1.rodzaj);
+ document.write("Owoc 1: "+" "+jablko.owoc+" "+jablko.kolor+" "+jablko.rodzaj+" "+jablko.smak+"<br>");
+ document.write("Owoc 2: "+" "+banan.owoc+" "+banan.kolor+" "+banan.rodzaj+" "+banan.smak+"<br>");
+document.write("Owoc 3: "+" "+gruszka.owoc+" "+gruszka.kolor+" "+gruszka.rodzaj+" "+gruszka.smak+"<br>");
+
+  
  </script> 
  </head>
 <body>

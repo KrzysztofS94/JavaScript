@@ -1,24 +1,27 @@
 <html>
  <head>
  <script type="text/javascript">
- function Obiekt_smula(nazwisko_s,imie_s,zawod_s)//początek konstruktora
+ function Owocsmula(owoc_s,kolor_s,rodzaj_s)//początek konstruktora
 {
-this.nazwisko=nazwisko_s;
-this.imie=imie_s;
-this.zawod=zawod_s;
+this.owoc=owoc_s;
+this.kolor=kolor_s;
+this.rodzaj=rodzaj_s;
 }//koniec konstruktora
- klient.prototype.wypisz = function () //definicja metody
+ Owocsmula.prototype.wypisz = function () //definicja metody
  {
- alert(this.nazwisko + ' ' + this.imie+ ' ' + this.zawod);
+ alert(this.owoc + ' ' + this.kolor+ ' ' + this.rodzaj);
  };
-var pokaz_smula = new Obiekt_smula("Smuła", "Krzysztof", "Informatyk"); // nowy obiekt osoba1
-
-pokaz_smula.wypisz(); // uruchomienie metody wypisz() dotyczącej osoby 1
-
- document.write("dostęp do właściwości"+"<br>");
-// poniżej dostęp do pól osoby1
- document.write("klient pierwszy"+" "+osoba1.nazwisko+" "+osoba1.imie+" "+osoba1.zawod);
- </script>
+var jablko1 = new Owocsmula("jablko", "czerwone", "gloster"); // nowy obiekt osoba1
+var banbn1 = new Owocsmula("banan", "żółty", "banan żółty");
+  
+jablko1.wypisz(); 
+banan1.wypisz(); // uruchomienie metody wypisz() dotyczącej osoby 1
+  
+ document.write("dostęp do właściwości"+"<br>");// poniżej dostęp do pól osoby1
+  
+ document.write("Owoc 1: "+" "+jablko1.owoc+" "+jablko1.kolor+" "+jablko1.rodzaj+"<br>");
+ document.write("Owoc 2: "+" "+banan1.owoc+" "+banan1.kolor+" "+banan1.rodzaj);
+ </script> 
  </head>
 <body>
 <br>

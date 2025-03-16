@@ -1,0 +1,133 @@
+<html>
+<head>
+    <script type="text/javascript">
+        function okno_zamknij_smula() {
+            window.close()
+        }
+    </script>
+</head>
+<body>
+<form>
+<textarea name="Smuła" cols="120" rows="30" readonly>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Obliczenia</title>
+<style>
+body {
+  background-color: silver; 
+}
+p {
+  color: green;
+  font-size: 41px;
+}
+#menu {
+  color: red;
+  font-size: 41px;
+}
+
+</style>
+</head>
+<body>
+
+<p id="nazwisko">Moje nazwisko to: Krzysztof Smuła</p>
+<p id="oblicz"></p>
+<a id="menu"></a>
+<br><br>
+<input type="button" name="wybór opcji" value="wybór opcji" onclick="opcja_smu('')">
+<br><br>
+<a id="opcje"> </a>
+<script>
+  const imie_smu = "Krzysztof";
+  const nazwisko_smu = "smuła";
+  
+  const dur_smu = 29 + 50;
+  const liczba1_smu = imie_smu.length;
+  const liczba2_smu = liczba1_smu + 7;
+  const liczba3_smu = nazwisko_smu.length;
+  const liczba4_smu = liczba3_smu + 4;
+  const lln_smu = liczba3_smu + 20;
+
+  document.getElementById("oblicz").innerHTML = 
+    "liczba1 = " + liczba1_smu + "<br>" +
+    "liczba2 = " + liczba1_smu + " + 7 = " + liczba2_smu + "<br>" +
+    "liczba3 = " + liczba3_smu + "<br>" +
+    "liczba4 = " + liczba3_smu + " + 4 = " + liczba4_smu + "<br>";
+	
+  document.getElementById("menu").innerHTML = 
+	"------------MENU------------" + "<br>" +
+	liczba1_smu + "-wyświetlanie teorii o operatorach logicznych" + "<br>" +
+	lln_smu + "- sprawdzanie czy liczba należy do przedziału (od " + liczba1_smu + "; do" + liczba2_smu + "]" + "<br>" +
+	dur_smu + "- czy liczba należy do przedziału (-oo ; " + liczba1_smu + ")  lub [" + liczba2_smu + " ; +oo))";
+	
+	 function opcja_smu() {
+            let opcja = prompt("podaj opcję= ","");	
+			
+   if(opcja==9)
+  {
+   document.getElementById("opcje").innerHTML = 
+   "<font color=green size=7;>Jesteś w opcji 9 -->teoria</font>" + "<br>" + 
+   "<font color=blue size=5;>&& i x=3 y=4 (x<0 && y>2) wynik-->prawda</font>" + "<br>" +
+   "<font color=blue size=5;>|| lub x=3 y=4 (x==8 || y==6) wynik-->fałsz</font>" + "<br>" +
+   "<font color=blue size=5;>! zaprzeczenie x=3 y=4 !(x==y) wynik-->prawda</font>" + "<br>";
+  }
+ else if (opcja == 25) {
+  let przedz_smu = prompt("podaj liczbę: ", "");
+  let przedz = parseFloat(przedz_smu);
+  
+  let wyp_smu = ""; 
+
+  wyp_smu += "<font color=green size=7>Jesteś w opcji 25 -->Przedział";
+
+  if (przedz >= 9 && przedz <= 16) 
+  {
+    wyp_smu += "<br>Liczba należy do przedziału";
+  } 
+  else 
+  {
+    wyp_smu += "<br>Liczba nie należy do przedziału";
+  }
+  wyp_smu += "</font><br>"; 
+
+  document.getElementById("opcje").innerHTML = wyp_smu;
+}
+else if (opcja == 79) {
+  let przedz2_smu = prompt("podaj liczbę: ", "");
+  let przedz2 = parseFloat(przedz2_smu);
+  
+  let wyp2_smu = ""; 
+
+  wyp2_smu += "<font color=green size=7>Jesteś w opcji 79 -->Przedział";
+
+  if (przedz2 < 9 || przedz2 >= 16) 
+  {
+    wyp2_smu += "<br>Liczba należy do przedziału";
+  } 
+  else 
+  {
+    wyp2_smu += "<br>Liczba nie należy do przedziału";
+  }
+  wyp2_smu += "</font><br>"; 
+
+  document.getElementById("opcje").innerHTML = wyp2_smu;
+}
+
+else
+{
+  document.getElementById("opcje").innerHTML = 
+  "<font color=red size=7>nie ma takiej opcji</font>";
+}
+
+}
+
+</script>
+
+</body>
+</html>
+</textarea>
+    </form>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_smula()" />
+    <script type="text/javascript">
+    </script>
+</body>
+</html>
